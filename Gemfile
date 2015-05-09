@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap'
+end
+
 # added by Haru Okaniwa
 
 # Use Capistrano for deployment
