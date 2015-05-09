@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get 'faces/admin' => 'faces#admin'
-  resources :faces
+  resources :faces do
+    collection do
+      get :admin
+    end
+  end
   resources :raws
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
