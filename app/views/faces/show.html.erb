@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @face.user %>
+</p>
+
+<p>
+  <strong>Raw:</strong>
+  <%= @face.raw %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @face.filename %>
+</p>
+
+<%= link_to 'Edit', edit_face_path(@face) %> |
+<%= link_to 'Back', faces_path %>

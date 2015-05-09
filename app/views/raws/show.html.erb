@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @raw.user %>
+</p>
+
+<p>
+  <strong>Filename:</strong>
+  <%= @raw.filename %>
+</p>
+
+<%= link_to 'Edit', edit_raw_path(@raw) %> |
+<%= link_to 'Back', raws_path %>
