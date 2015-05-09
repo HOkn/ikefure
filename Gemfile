@@ -40,7 +40,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'omniauth-facebook'
 
-gem 'dotenv'
+gem 'dotenv-rails'
 
 gem 'rspec-rails'
 gem 'factory_girl_rails'
