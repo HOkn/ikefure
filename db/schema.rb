@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150509060529) do
+ActiveRecord::Schema.define(version: 20150509063618) do
 
   create_table "faces", force: :cascade do |t|
     t.integer  "user_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20150509060529) do
     t.string   "filename"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "selected"
   end
 
   add_index "faces", ["raw_id"], name: "index_faces_on_raw_id"

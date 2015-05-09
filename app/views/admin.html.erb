@@ -1,9 +1,19 @@
-<!-- User.all について、イケフレを選び終えてないUser.Faceを表示-->
 
-<!-- controller: @users = User.all -->
--for @users.each do |user|
-    =user.created_at
-    =user.name
-    -for Face.where(user_id:user.id).each do |face|
-      <!-- face画像をここに表示する-->
 
+<%= form_for(@faces) do |f| %>
+  <!-- User.all について、イケフレを選び終えてないUser.Faceを表示-->
+
+  <!-- controller: @users = User.all -->
+  -for @users.each do |user|
+      =user.created_at
+      =user.name
+      -for Face.where(user_id:user.id).each do |face|
+        <!-- face画像をここに表示する-->
+
+  label
+  f.checkbox
+        face :selected, true, false
+        <!-- faceの写真 -->
+<%= f.submit%>
+
+<%end%>
