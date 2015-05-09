@@ -1,3 +1,8 @@
 <!-- User.all について、イケフレを選び終えてないUser.Faceを表示-->
 
+-for @users.each do |user|
+    =user.created_at
+    =user.name
+    -for Face.where(user_id:user.id).each do |face|
+      <!-- face画像をここに表示する-->
 
