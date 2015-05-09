@@ -16,20 +16,33 @@
  */
 
 .top{
-  height:100px;
-  color:red;
+  height:150px;
+  color:white;
 }
 
 .aligncenter{
   text-align: center;
 }
 
+.btn{
+  margin: 20px 0px 50px 40%;
+  height:40px;
+  font-size:20px;
+}
+
 body{
-  background-color: rgb(232, 69, 131);;
+  background-color: rgb(242, 116, 164);
+  align-content: center;
 }
 
 img{
-  width:50%;
+  width: 50%;
+}
+img.arashi{
+  width:47%;
+}
+img.akb{
+  width:53%;
 }
 
 .floatright{

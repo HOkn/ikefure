@@ -1,7 +1,8 @@
-  <div class="container-fluid aligncenter top">
-    イケフレ
-  </div>
-
-<%= image_tag 'arashi2.jpg' %>
-<%= image_tag 'AKB.jpg', :class=>"floatright"%>
-<%= link_to "Facebookでさがす！", user_omniauth_authorize_path(:facebook), class: "btn btn-default" %>
+<div class="container-fluid aligncenter top">
+  <h2>イケフレ</h2>
+  <h2>イケてる友達は誰？</h2>
+</div>
+<%= link_to "Facebookでさがす！", user_omniauth_authorize_path(:facebook), class: "btn btn-danger" %>
+<%= image_tag 'arashi-1.jpg', :class=>"arashi"%>
+<%= image_tag 'akb2.jpg', :class=>"floatright akb"%>
+<%= link_to "Facebookでさがす！", user_omniauth_authorize_path(:facebook), class: "btn btn-danger" %>
