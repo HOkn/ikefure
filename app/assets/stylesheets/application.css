@@ -14,3 +14,27 @@
  *= require_tree .
  *= require_self
  */
+
+.top{
+  height:100px;
+  color:red;
+}
+
+.aligncenter{
+  text-align: center;
+}
+
+body{
+  background-color: rgb(232, 69, 131);;
+}
+
+img{
+  width:50%;
+}
+
+.floatright{
+  float:right;
+}
+.clear{
+  clear:both;
+}
