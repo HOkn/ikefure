@@ -55,6 +55,6 @@ server '153.122.35.145', user: 'root'
 
 set :ssh_options, {
   forward_agent: false,
-  password: ENV['PASSWORD'],
+  password: ENV['SERVER_PASSWORD'],
   auth_methods: %w(password)
 }
