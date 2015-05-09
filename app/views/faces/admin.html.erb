@@ -8,9 +8,10 @@
     <%= user.name %>
       <%- Face.where(user_id:user.id).each do |face| %>
         <%= form_for(face) do |f| %>
-          <!-- face画像をここに表示する-->
-          <%= f.check_box :selected %>
-          <!-- faceの写真 -->
+          <!-- <label for="photo"> -->
+            <%= f.check_box :selected %>
+            <!-- faceの写真 id:photo-->
+          <!-- </label> -->
         <%= f.submit %>
       <% end %>
   <% end %>
