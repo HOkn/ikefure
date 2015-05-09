@@ -50,6 +50,8 @@ gem 'omniauth-facebook'
 
 gem 'dotenv-rails'
 
+gem 'koala'
+
 gem 'rspec-rails'
 gem 'factory_girl_rails'
 
