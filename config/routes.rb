@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'faces/admin' => 'faces#admin'
   resources :faces
   resources :raws
   resources :users

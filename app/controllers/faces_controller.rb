@@ -1,6 +1,12 @@
 class FacesController < ApplicationController
   before_action :set_face, only: [:show, :edit, :update, :destroy]
 
+  def admin
+    @users = User.all
+    @faces = Face.all
+  end
+
+
   # GET /faces
   # GET /faces.json
   def index
@@ -25,7 +31,6 @@ class FacesController < ApplicationController
   # POST /faces.json
   def create
     @face = Face.new(face_params)
-
     respond_to do |format|
       if @face.save
         format.html { redirect_to @face, notice: 'Face was successfully created.' }
