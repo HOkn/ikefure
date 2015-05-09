@@ -2,9 +2,13 @@ source 'https://rubygems.org'
 
 # added by Haru Okaniwa
 
-
-
-
+# Use Capistrano for deployment
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+gem 'capistrano3-unicorn'
+gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
@@ -52,6 +56,9 @@ gem 'pry-byebug'
 
 gem 'better_errors'
 gem 'binding_of_caller'
+
+gem 'execjs'
+gem 'therubyracer'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
