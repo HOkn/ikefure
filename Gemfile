@@ -2,9 +2,15 @@ source 'https://rubygems.org'
 
 # added by Haru Okaniwa
 
+# Use Capistrano for deployment
+gem 'capistrano'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-rbenv'
+gem 'capistrano3-unicorn'
+gem 'capistrano-sidekiq', github: 'seuros/capistrano-sidekiq'
 
-
-
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
