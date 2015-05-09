@@ -1,0 +1,17 @@
+
+
+
+  <!-- User.all について、イケフレを選び終えてないUser.Faceを表示-->
+  <!-- controller: @users = User.いけふれを並び終えていない -->
+<%- @users.each do |user| %>
+    <%= user.created_at %>
+    <%= user.name %>
+      <%- Face.where(user_id:user.id).each do |face| %>
+        <%= form_for(face) do |f| %>
+          <!-- face画像をここに表示する-->
+          <%= f.check_box :selected %>
+          <!-- faceの写真 -->
+        <%= f.submit %>
+      <% end %>
+  <% end %>
+<% end %>

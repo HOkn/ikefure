@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :faces
+  resources :faces do
+    collection do
+      get :admin
+    end
+  end
   resources :raws
   resources :users
 
