@@ -1,9 +1,11 @@
+# bundle exec ruby lib/utils/face_detect.rb
+
 require 'pry'
 require 'opencv'
 include OpenCV
 
 @dirname = File.dirname(__FILE__)
-@cascade_file = CvHaarClassifierCascade::load("#{dirname}/haarcascades/haarcascade_frontalface_default.xml")
+@cascade_file = CvHaarClassifierCascade::load("#{@dirname}/haarcascades/haarcascade_frontalface_default.xml")
 
 def find_faces(image, wider = 50)
   res = []
@@ -16,7 +18,7 @@ def find_faces(image, wider = 50)
   res
 end
 
-def face_images(dir, scale=0.1)
+def face_images(dir, scale=1.0)
   Dir.glob("#{dir}/*.png").map do |file|
     image = IplImage.load(file, 1)
     resized = image.resize(CvSize.new(image.cols*scale, image.rows*scale))
@@ -24,10 +26,10 @@ def face_images(dir, scale=0.1)
   end.flatten.compact
 end
 
-images = face_images('images/faces/female')
+images = face_images('public/images/samples')
 
 images.each_with_index do |image, idx|
-  image.save("face_img_#{idx}.png")
+  image.save("public/images/faces/face_img_#{idx}.png")
 end
 
 # window = GUI::Window.new('Display window') # Create a window for display.
